@@ -20,7 +20,7 @@ public class searchFileForString {
             int lineCounter = 1;
             boolean foundAtLeastOnce = false;
             for (String line : allLinesInFile) {
-                if(line.toLowerCase().contains(searchString)){
+                if(line.toLowerCase().contains(searchString.toLowerCase())){
                     
                     if(!foundAtLeastOnce){
                         foundAtLeastOnce = true;
