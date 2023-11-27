@@ -18,12 +18,12 @@ public class searchFileForString {
             List<String> allLinesInFile = Files.readAllLines(Paths.get(fileName));
 
             int lineCounter = 1;
-            boolean found = false;
+            boolean foundAtLeastOnce = false;
             for (String line : allLinesInFile) {
                 if(line.toLowerCase().contains(searchString)){
                     
-                    if(!found){
-                        found = true;
+                    if(!foundAtLeastOnce){
+                        foundAtLeastOnce = true;
                         System.out.println("\nFound the word \"" + searchString + "\": ");
                     }
                     System.out.println("Line " + lineCounter + ": " + line + "\n");
